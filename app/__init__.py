@@ -2,12 +2,12 @@ import importlib
 import warnings
 from typing import Callable
 
-from flask import Flask, Blueprint
-from socketio import Server, WSGIApp, Namespace
+from flask import Flask
+from socketio import Server, WSGIApp
 
 from app.exceptions.warning import ViewNotFound, FailedToRegister
 
-VIEWS = ["home"]
+VIEWS: list[str] = ["home"]
 
 
 def create_app() -> Flask:

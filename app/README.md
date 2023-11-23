@@ -7,4 +7,4 @@
 - [exceptions](exceptions): 여러 Exception들이 있습니다.
 
 ## 연결
-
+`__init__.py`의 상수 VIEWS에 모듈 이름을 추가해주세요.
