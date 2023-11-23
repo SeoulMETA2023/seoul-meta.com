@@ -47,7 +47,3 @@ def create_app() -> Flask:
             sio.register_namespace(get_namespace())
 
     return app
-
-
-if __name__ == "__main__":
-    create_app().run("0.0.0.0", debug=True)
