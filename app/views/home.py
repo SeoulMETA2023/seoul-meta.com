@@ -1,11 +1,14 @@
-from flask import Blueprint, render_template
+from flask import Flask, Blueprint, render_template
+from socketio import Server
+
+blueprint = Blueprint("app", __name__, url_prefix="/")
 
 
-def get_blueprint() -> Blueprint:
-    blueprint = Blueprint("app", __name__, url_prefix="/")
+@blueprint.route("/")
+def home():
+    return render_template("home.html")
 
-    @blueprint.route("/")
-    def home():
-        return render_template("home.html")
 
-    return blueprint
+def register(app: Flask, _: Server) -> None:
+    app.register_blueprint(blueprint)
+    return

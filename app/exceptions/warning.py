@@ -2,5 +2,5 @@ class ViewNotFound(Warning):
     pass
 
 
-class EventNotFound(Warning):
-    pass
+class FailedToRegister(Warning):
+    ...

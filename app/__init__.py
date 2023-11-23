@@ -5,10 +5,9 @@ from typing import Callable
 from flask import Flask, Blueprint
 from socketio import Server, WSGIApp, Namespace
 
-from app.exceptions.warning import ViewNotFound, EventNotFound
+from app.exceptions.warning import ViewNotFound, FailedToRegister
 
-VIEWS: list[str] = ["home"]
-EVENTS: list[str] = []
+VIEWS = ["home"]
 
 
 def create_app() -> Flask:
@@ -25,25 +24,10 @@ def create_app() -> Flask:
             continue
 
         try:
-            get_blueprint: Callable[[], Blueprint] = getattr(module, "get_blueprint")
+            register: Callable[[Flask, Server], None] = getattr(module, "register")
         except AttributeError:
-            warnings.warn(f"{module_name}: get_blueprint() does not exist.", ViewNotFound)
+            warnings.warn(f"{module_name}: register() does not exist.", FailedToRegister)
         else:
-            app.register_blueprint(get_blueprint())
-
-    for event in EVENTS:
-        module_name = f"app.events.{event}"
-        try:
-            module = importlib.import_module(module_name)
-        except ModuleNotFoundError:
-            warnings.warn(f"{module_name} does not exist.", EventNotFound)
-            continue
-
-        try:
-            get_namespace: Callable[[], Namespace] = getattr(module, "get_namespace")
-        except AttributeError:
-            warnings.warn(f"{module_name}: get_namespace() does not exist.", EventNotFound)
-        else:
-            sio.register_namespace(get_namespace())
+            register(app, sio)
 
     return app
