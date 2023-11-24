@@ -1,3 +1,3 @@
 from app import create_app
 
-create_app().run("127.0.0.1", 8000, debug=True)
+create_app().run("0.0.0.0", 8000, debug=True)
