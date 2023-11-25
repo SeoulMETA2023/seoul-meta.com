@@ -1,8 +1,0 @@
-:root {
-    /* size */
-    --menu-height: 12rem
-}
-
-#menu.menu_open {
-    height: 100vh;
-}

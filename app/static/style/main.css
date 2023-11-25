@@ -26,7 +26,8 @@ header {
     width: 100%;
     height: var(--menu-height);
     margin: 0;
-    z-index: 2;
+    top: 0;
+    z-index: 3;
 
     &>#nav-bar {
         display: flex;
@@ -74,6 +75,64 @@ header {
     height: var(--menu-height);
     margin: 0;
     background-color: var(--color-black);
-    transition-duration: 0.5s;
+    transition: 0.5s ease-in-out;
     overflow: hidden;
+    top: 0;
+    z-index: 2;
+}
+
+#content {
+    margin-top: var(--menu-height);
+
+    /*& > div:first-child {*/
+    /*    border-top: var(--menu-height);*/
+    /*}*/
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    :root {
+        /* size */
+        --menu-height: 12rem
+    }
+
+    #menu.menu_open {
+        height: 100vh;
+    }
+
+    #content {
+        font-size: 260%;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+    /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+    /* Styles */
+}
+
+/* iPhone 4 and high pixel ratio devices ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+    /* Styles */
 }

@@ -1,0 +1,77 @@
+.container {
+    position: relative;
+    width: 100%;
+    background-color: var(--color-black);
+    overflow: hidden;
+
+    & > .icon {
+        position: absolute;
+    }
+
+    /*& > div {*/
+    /*    position: absolute;*/
+    /*    top: 50%;*/
+    /*    left: 50%;*/
+    /*    transform: translate(-50%, -50%);*/
+    /*    background-color: #9C1A1C;*/
+    /*    width: 70%;*/
+    /*    height: 70%;*/
+    /*}*/
+}
+
+@keyframes rotate_icon {
+    100% {
+        transform: translate(-50%, 50%) rotate(360deg);
+    }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .container {
+        height: 32em;
+
+        &:first-child {
+            height: 40em;
+        }
+
+        & > .icon {
+            width: 100%;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 50%);
+            animation: rotate_icon 170s linear infinite;
+        }
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+    /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+    /* Styles */
+}
+
+/* iPhone 4 and high pixel ratio devices ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+    /* Styles */
+}

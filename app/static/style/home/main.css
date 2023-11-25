@@ -1,5 +1,0 @@
-#content {
-    & > div:first-child {
-        padding-top: var(--menu-height);
-    }
-}
