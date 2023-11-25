@@ -12,7 +12,10 @@ html {
 body {
     margin: 0;
     overflow: hidden visible;
-    height: 10000px;
+
+    &.no_scroll {
+        overflow: hidden;
+    }
 }
 
 header {
@@ -21,7 +24,7 @@ header {
     justify-content: center;
     background-color: var(--color-black);
     width: 100%;
-    height: 10rem;
+    height: var(--menu-height);
     margin: 0;
     z-index: 2;
 
@@ -35,16 +38,42 @@ header {
 }
 
 #meta-full-svg {
-    height: 6rem;
+    height: calc(var(--menu-height) * 0.5);
 }
 
-#menu-svg {
-    width: 5.5rem;
+#menu-btn {
+    background-color: unset;
+    border: unset;
+    & > svg {
+        width: calc(var(--menu-height) * 0.5);
+        height: calc(var(--menu-height) * 0.5);
+
+        & > #menu-svg1,
+        #menu-svg2 {
+            transition: 0.3s;
+            opacity: 1;
+            transform: translate(0);
+        }
+
+        &.active {
+            & > #menu-svg1 {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            & > #menu-svg2 {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+        }
+    }
 }
 
-#intro {
-    position: relative;
-    height: calc(100vh - 25rem);
-    padding-top: 10rem;
+#menu {
+    position: fixed;
+    width: 100%;
+    height: var(--menu-height);
+    margin: 0;
     background-color: var(--color-black);
+    transition-duration: 0.5s;
+    overflow: hidden;
 }
