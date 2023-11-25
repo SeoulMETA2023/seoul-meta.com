@@ -2,9 +2,16 @@
     position: relative;
     width: 100%;
     background-color: var(--color-black);
+    color: var(--color-white);
     overflow: hidden;
 
-    & > .icon {
+    & > .header-wrap {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    & > #icon {
         position: absolute;
     }
 
@@ -31,10 +38,29 @@
         height: 32em;
 
         &:first-child {
-            height: 40em;
+            height: 37em;
+
+            & > .header-wrap {
+                top: 1.5em;
+            }
         }
 
-        & > .icon {
+        & > .header-wrap {
+            width: 80%;
+
+            & > .title {
+                text-align: center;
+                font-size: 220%;
+                font-weight: bold;
+            }
+
+            & > .description {
+                margin-top: 1em;
+                color: var(--color-gray);
+            }
+        }
+
+        & > #icon {
             width: 100%;
             left: 50%;
             bottom: 0;

@@ -73,6 +73,7 @@ header {
     position: fixed;
     width: 100%;
     height: var(--menu-height);
+    padding: 0;
     margin: 0;
     background-color: var(--color-black);
     transition: 0.5s ease-in-out;
@@ -83,10 +84,6 @@ header {
 
 #content {
     margin-top: var(--menu-height);
-
-    /*& > div:first-child {*/
-    /*    border-top: var(--menu-height);*/
-    /*}*/
 }
 
 /* Smartphones (portrait and landscape) ----------- */
