@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap');
+
+
 :root {
     /* color */
     --color-black: #1E1E1E;
@@ -5,12 +8,19 @@
     --color-white: #FFFFFF;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-size: 92%;
+    /*height: 10000px;*/
 }
 
 body {
-    margin: 0;
+    background-color: var(--color-black);
     overflow: hidden visible;
 
     &.no_scroll {
@@ -25,7 +35,6 @@ header {
     background-color: var(--color-black);
     width: 100%;
     height: var(--menu-height);
-    margin: 0;
     top: 0;
     z-index: 3;
 
@@ -35,6 +44,25 @@ header {
         height: 100%;
         align-items: center;
         justify-content: space-between;
+    }
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 8em;
+    font-size: 250%;
+    background-color: var(--color-black);
+
+    & > div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: var(--color-gray);
+        font-weight: bold;
+        letter-spacing: 0.05em;
     }
 }
 
@@ -73,8 +101,6 @@ header {
     position: fixed;
     width: 100%;
     height: var(--menu-height);
-    padding: 0;
-    margin: 0;
     background-color: var(--color-black);
     transition: 0.5s ease-in-out;
     overflow: hidden;
