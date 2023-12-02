@@ -45,10 +45,10 @@
             height: 37em;
 
             & > .header-wrap {
-                top: 1.5em;
+                top: 3.8em;
 
                 & > .title {
-                    font-size: 285%;
+                    font-size: 265%;
                     font-weight: bolder;
                 }
             }
