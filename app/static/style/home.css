@@ -12,6 +12,12 @@
 
         & > .title {
             font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+        }
+
+        & > .description {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: var(--color-gray);
         }
     }
 
@@ -45,11 +51,14 @@
             height: 37em;
 
             & > .header-wrap {
-                top: 3.8em;
+                top: 2.7em;
 
                 & > .title {
                     font-size: 265%;
-                    font-weight: bolder;
+                }
+
+                & > .description {
+                    font-size: 90%;
                 }
             }
         }
@@ -58,14 +67,11 @@
             width: 80%;
 
             & > .title {
-                text-align: center;
                 font-size: 220%;
-                font-weight: bold;
             }
 
             & > .description {
                 margin-top: 1em;
-                color: var(--color-gray);
             }
         }
 
