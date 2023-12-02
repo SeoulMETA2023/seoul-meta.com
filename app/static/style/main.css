@@ -38,7 +38,7 @@ header {
     top: 0;
     z-index: 3;
 
-    &>#nav-bar {
+    & > #nav-bar {
         display: flex;
         width: 90%;
         height: 100%;
@@ -51,7 +51,7 @@ footer {
     position: relative;
     width: 100%;
     height: 8em;
-    font-size: 250%;
+    font-size: 220%;
     background-color: var(--color-black);
 
     & > div {
@@ -63,6 +63,10 @@ footer {
         color: var(--color-gray);
         font-weight: bold;
         letter-spacing: 0.05em;
+
+        & > img {
+            filter: grayscale(100%);
+        }
     }
 }
 
@@ -117,6 +121,10 @@ footer {
     :root {
         /* size */
         --menu-height: 12rem
+    }
+
+    footer > div > img {
+        width: 2.4em;
     }
 
     #menu.menu_open {
