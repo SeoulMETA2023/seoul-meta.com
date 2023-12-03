@@ -1,4 +1,5 @@
-from flask import Flask, Blueprint, render_template
+import flask
+from flask import Flask, Blueprint
 from socketio import Server
 
 blueprint = Blueprint("team", __name__, url_prefix="/team/")
