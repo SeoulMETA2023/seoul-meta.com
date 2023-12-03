@@ -1,7 +1,7 @@
 let isOpened = false
 
 
-function menuToggle() {
+document.getElementById("menu-btn").addEventListener("click", () => {
     isOpened = !isOpened
 
     const menuDiv = document.getElementById("menu")
@@ -15,4 +15,4 @@ function menuToggle() {
     document.body.classList.remove("no_scroll")
     menuDiv.classList.remove("menu_open")
     menuSvg.classList.remove("active")
-}
+})
