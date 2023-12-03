@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/style/main.css"/>
     <link rel="stylesheet" href="/static/style/home.css"/>
 </head>
-<body>
+<body onload="write_text()">
 <header>
     <nav id="nav-bar">
         <a href="/">
@@ -29,12 +29,16 @@
     <div class="container">
         <div class="header-wrap">
             <div class="title">
-                <div>THE FREE SPACE </div>
-                <div>FOR CREATION.</div>
+                <div class="auto-text">
+{#                    THE FREE SPACE #}
+                </div>
+                <div class="auto-text">
+{#                    FOR CREATION.#}
+                </div>
             </div>
-            <div class="description">
-                META는 공학을 향한 열정과 창의성으로 자유롭게 프로젝트를 진행합니다.
-                함께 뛰어난 아이디어를 현실로 구현하고, 새로운 기술과 경험을 서로 공유하는 공학을 위한 창작의 공간입니다.
+            <div class="description auto-text">
+{#                META는 공학을 향한 열정과 창의성으로 자유롭게 프로젝트를 진행합니다.#}
+{#                함께 뛰어난 아이디어를 현실로 구현하고, 새로운 기술과 경험을 서로 공유하는 공학을 위한 창작의 공간입니다.#}
             </div>
         </div>
 
@@ -52,5 +56,6 @@
     </div>
 </footer>
 <script src="/static/script/menu.js"></script>
+<script src="/static/script/texting_anim.js"></script>
 </body>
 </html>
