@@ -1,12 +1,12 @@
 function write_text() {
     const elems = document.getElementsByClassName("auto-text")
 
-    let next1 = write_line(elems[0], "THE FREE SPACE ", 0, 90)
-    let next2 = write_line(elems[1], "FOR CREATION.", next1 + 300, 90)
+    let next1 = write_line(elems[0], "THE FREE SPACE ", 0, 80)
+    let next2 = write_line(elems[1], "FOR CREATION.", next1 + 200, 80)
     let next3 = write_line(
         elems[2],
         "META는 공학을 향한 열정과 창의성으로 자유롭게 프로젝트를 진행합니다. ",
-        next2 + 500,
+        next2 + 700,
         50)
     write_line(
         elems[2],
