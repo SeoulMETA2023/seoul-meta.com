@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Open+Sans:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Open+Sans:ital,wght@1,800&display=swap');
 
 :root {
     /* color */
@@ -67,6 +67,11 @@ footer {
             filter: grayscale(100%);
         }
     }
+}
+
+button {
+    border: unset;
+    background-color: unset;
 }
 
 #meta-full-svg {

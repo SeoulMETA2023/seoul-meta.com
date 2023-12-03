@@ -8,11 +8,15 @@ function write_text() {
         "META는 공학을 향한 열정과 창의성으로 자유롭게 프로젝트를 진행합니다. ",
         next2 + 700,
         50)
-    write_line(
+    let next4 = write_line(
         elems[2],
         "함께 뛰어난 아이디어를 현실로 구현하고, 새로운 기술과 경험을 서로 공유하는 공학을 위한 창작의 공간입니다.",
         next3 + 500,
         50)
+    setTimeout(() => {
+        const btn = document.getElementById("event-btn")
+        btn.style.opacity = 1
+    }, next4 + 300)
 }
 
 function write_line(elem, text, timeout = 0, speed = 100) {
