@@ -7,7 +7,7 @@ from socketio import Server, WSGIApp
 
 from app.exceptions.warning import ViewNotFound, FailedToRegister
 
-VIEWS: list[str] = ["home"]
+VIEWS: list[str] = ["home", "team"]
 
 
 def create_app() -> Flask:

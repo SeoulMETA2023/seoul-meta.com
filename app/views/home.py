@@ -1,7 +1,7 @@
 from flask import Flask, Blueprint, render_template
 from socketio import Server
 
-blueprint = Blueprint("app", __name__, url_prefix="/")
+blueprint = Blueprint("home", __name__, url_prefix="/")
 
 
 @blueprint.route("/")
