@@ -1,11 +1,9 @@
 .container {
     position: relative;
     width: 100%;
-    background-color: var(--color-black);
-    color: var(--color-white);
     overflow: hidden;
 
-    & > .header-wrap {
+    & > .text-wrap {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -51,10 +49,25 @@
     /*}*/
 }
 
+.bg-black {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.bg-light-gray {
+    background-color: var(--color-light-gray);
+    color: var(--color-black);
+}
+
 @keyframes rotate_icon {
     100% {
         transform: translate(-50%, 50%) rotate(360deg);
     }
+}
+
+.fade-set {
+    opacity: 0;
+    transition-duration: 1s;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -65,7 +78,7 @@
         &:first-child {
             height: 37em;
 
-            & > .header-wrap {
+            & > .text-wrap {
                 top: 2.7em;
 
                 & > .title {
@@ -79,12 +92,11 @@
                 & > .button-wrap > button {
                     background-color: var(--color-white);
                     font-size: 105%;
-                    opacity: 0;
                 }
             }
         }
 
-        & > .header-wrap {
+        & > .text-wrap {
             width: 80%;
 
             & > .title {
