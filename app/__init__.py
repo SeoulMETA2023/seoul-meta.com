@@ -11,7 +11,7 @@ VIEWS: list[str] = ["home", "team"]
 
 
 def create_app() -> Flask:
-    app = Flask(import_name="app", static_url_path="/static")
+    app = Flask(import_name="app")
     sio = Server()
     app.wsgi_app = WSGIApp(sio, app.wsgi_app)
 
