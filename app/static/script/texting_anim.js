@@ -1,8 +1,8 @@
 function write_text() {
     const elems = document.getElementsByClassName("auto-text")
 
-    let next1 = write_line(elems[0], "THE FREE SPACE ", 0, 90)
-    let next2 = write_line(elems[1], "FOR CREATION.", next1 + 200, 90)
+    let next1 = write_line(elems[0], "THE FREE SPACE ", 0, 60)
+    let next2 = write_line(elems[1], "FOR CREATION.", next1 + 200, 60)
     setTimeout(() => {
         const description = document.getElementById("meta-description")
         description.style.opacity = "1"
@@ -26,5 +26,3 @@ function write_line(elem, text, timeout = 0, speed = 100) {
     }, timeout)
     return speed * text.length + timeout
 }
-
-
