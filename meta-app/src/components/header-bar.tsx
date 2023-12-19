@@ -14,7 +14,7 @@ export default function HeaderBar() {
 
     return (
         <Fragment>
-            <header className={"w-full h-16 fixed bg-black-gear flex justify-center z-50"}>
+            <header className={"w-full h-16 fixed top-0 bg-black-gear flex justify-center z-50"}>
                 <div className={"m-3 w-full flex justify-between"}>
                     <Link to={"/"} onClick={headerOff}>
                         <img src={"image/meta_full(white).svg"} alt={"meta logo"} className={"h-full"}/>
@@ -29,7 +29,7 @@ export default function HeaderBar() {
                     </svg>
                 </div>
             </header>
-            <div className={`w-full ${active? "h-screen" : "h-16"} pt-16 fixed bg-black-gear duration-700 ease-in-out overflow-hidden z-40`}>
+            <div className={`w-full ${active? "h-screen" : "h-16"} pt-16 fixed top-0 bg-black-gear duration-700 ease-in-out overflow-hidden z-40`}>
                 <div className={"mr-12 ml-12 mt-5 flex flex-col text-white font-noto-sans"}>
                     <Link to={"/"}
                           className={`header-list ${active? "opacity-100" : "opacity-0"}`}

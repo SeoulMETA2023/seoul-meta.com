@@ -1,12 +1,14 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 // import {Outlet} from "react-router-dom";
 import HeaderBar from "./components/header-bar";
+import Footer from "./components/footer";
 
 function App() {
   return (
-      <Fragment>
+      <div className={"mt-16"}>
           <HeaderBar/>
-      </Fragment>
+          <Footer/>
+      </div>
   );
 }
 
