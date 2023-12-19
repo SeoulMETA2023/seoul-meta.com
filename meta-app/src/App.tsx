@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+// import {Outlet} from "react-router-dom";
+import HeaderBar from "./components/header-bar";
 
 function App() {
   return (
-      <div className={"h-screen bg-amber-500"}>
-          hello
-      </div>
+      <Fragment>
+          <HeaderBar/>
+      </Fragment>
   );
 }
 

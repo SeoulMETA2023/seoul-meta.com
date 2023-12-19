@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Open+Sans:ital,wght@1,800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .header-list {
+        @apply
+        w-full
+        h-9 mobile:h-14
+        text-2xl mobile:text-3xl
+        font-bold
+        flex justify-start items-center
+        duration-500;
+    }
+
+    .header-sublist {
+        @apply
+        pl-8
+        w-full
+        h-11 mobile:h-12
+        text-xl mobile:text-2xl
+        font-bold
+        flex justify-start items-center
+        duration-500;
+    }
+}

@@ -5,9 +5,14 @@ module.exports = {
   ],
   theme: {
     screens: {
+      "mobile": "380px",
       "tablet": "640px",
       "laptop": "1024px",
       "desktop": "1280px"
+    },
+    fontFamily: {
+      "noto-sans": ["Noto Sans KR", "sans-serif"],
+      "open-sans": ["Open Sans", "sans-serif"]
     },
     extend: {},
     colors: {
@@ -19,6 +24,7 @@ module.exports = {
         light: "#A7A7AC",
         dim: "#696969"
       },
+      white: "#FFFFFF",
     }
   },
   plugins: [],
