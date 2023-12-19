@@ -2,8 +2,9 @@ import React from 'react';
 
 function App() {
   return (
-    <div className="">
-    </div>
+      <div className={"h-screen bg-amber-500"}>
+          hello
+      </div>
   );
 }
 
