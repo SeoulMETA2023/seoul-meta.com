@@ -17,14 +17,14 @@ export default function HeaderBar() {
             <header className={"w-full h-16 fixed top-0 bg-black-gear flex justify-center z-50"}>
                 <div className={"m-3 w-full flex justify-between"}>
                     <Link to={"/"} onClick={headerOff}>
-                        <img src={"image/meta_full(white).svg"} alt={"meta logo"} className={"h-full"}/>
+                        <img src={"image/meta_full(white).svg"} alt={"meta logo"} className={`h-full duration-100 ${active? "opacity-0" : "opacity-100"}`}/>
                     </Link>
-                    <svg width="400" height="400" viewBox="0 0 40 40" className={"w-fit h-full"} onClick={headerToggle}>
-                        <path fill="#FFFFFF" fillRule="evenodd" clipRule="evenodd"
+                    <svg className={"w-fit h-full"} width="400" height="400" viewBox="0 0 40 40" onClick={headerToggle}>
+                        <path className={`duration-300 ${active? "translate-y-2" : ""}`} fill="#FFFFFF" fillRule="evenodd" clipRule="evenodd"
                               d="M33.3327 10H6.66602V15H33.3327V10Z"></path>
                         <path fill="#FFFFFF" fillRule="evenodd" clipRule="evenodd"
                               d="M6.66602 18.3317H33.3327V23.3317H6.66602V18.3317Z"></path>
-                        <path fill="#FFFFFF" fillRule="evenodd" clipRule="evenodd"
+                        <path className={`duration-300 ${active? "-translate-y-2" : ""}`} fill="#FFFFFF" fillRule="evenodd" clipRule="evenodd"
                               d="M6.66602 26.665H33.3327V31.665H6.66602V26.665Z"></path>
                     </svg>
                 </div>
