@@ -14,7 +14,21 @@ module.exports = {
       "noto-sans": ["Noto Sans KR", "sans-serif"],
       "open-sans": ["Open Sans", "sans-serif"]
     },
-    extend: {},
+    extend: {
+      spacing: {
+        160: "40rem"
+      },
+      animation: {
+        "gear-spin": "gear-spin 50s linear infinite"
+      },
+      keyframes: {
+        "gear-spin": {
+          "100%": {
+            transform: "translateY(50%) rotate(360deg)"
+          }
+        }
+      }
+    },
     colors: {
       black: {
         DEFAULT: "#000000",
