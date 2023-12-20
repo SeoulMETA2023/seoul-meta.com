@@ -8,7 +8,7 @@
     .header-list {
         @apply
         w-full
-        h-9 mobile:h-14
+        h-14 mobile:h-16
         text-2xl mobile:text-3xl
         font-bold
         flex justify-start items-center
@@ -19,7 +19,7 @@
         @apply
         pl-8
         w-full
-        h-11 mobile:h-12
+        h-12 mobile:h-14
         text-xl mobile:text-2xl
         font-bold
         flex justify-start items-center
