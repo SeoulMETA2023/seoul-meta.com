@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 
 export default function HeaderBar() {
@@ -11,6 +11,14 @@ export default function HeaderBar() {
     function headerToggle() {
         setActive(!active);
     }
+
+    useEffect(() => {
+        if (active) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+    }, [active]);
 
     return (
         <Fragment>
