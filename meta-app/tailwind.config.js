@@ -5,6 +5,7 @@ module.exports = {
   ],
   theme: {
     screens: {
+      "mobileS": "330px",
       "mobile": "380px",
       "tablet": "640px",
       "laptop": "1024px",
@@ -16,7 +17,7 @@ module.exports = {
     },
     extend: {
       spacing: {
-        145: "36.25rem",
+        150: "37.5rem",
         160: "40rem"
       },
       animation: {
