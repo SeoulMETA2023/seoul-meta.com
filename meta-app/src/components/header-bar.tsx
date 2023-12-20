@@ -1,8 +1,9 @@
 import React, {Fragment, useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 export default function HeaderBar() {
     const [active, setActive] = useState<boolean>(false);
+    const location = useLocation()
 
     function headerOff() {
         setActive(false);
@@ -40,47 +41,47 @@ export default function HeaderBar() {
             <div className={`w-full ${active? "h-screen" : "h-16"} pt-16 fixed top-0 bg-black-gear duration-700 ease-in-out overflow-hidden z-40`}>
                 <div className={"mr-12 ml-12 mt-5 flex flex-col text-white font-noto-sans"}>
                     <Link to={"/"}
-                          className={`header-list ${active? "opacity-100" : "opacity-0"}`}
+                          className={`header-list ${active? "opacity-100" : "opacity-0"} ${location.pathname === "/"? "underline underline-offset-8" : ""}`}
                           onClick={headerOff}>
                         Who are we?
                     </Link>
                     <Link to={"/team"}
-                          className={`header-list ${active? "opacity-100" : "opacity-0"}`}
+                          className={`header-list ${active? "opacity-100" : "opacity-0"} ${location.pathname === "/team"? "underline underline-offset-8" : ""}`}
                           onClick={headerOff}>
                         Team
                     </Link>
                     <Link to={"/rocket"}
-                          className={`header-sublist ${active? "opacity-100" : "opacity-0"}`}
+                          className={`header-sublist ${active? "opacity-100" : "opacity-0"} ${location.pathname === "/rocket"? "underline underline-offset-8" : ""}`}
                           onClick={headerOff}>
                         Rocket
                     </Link>
                     <Link to={"/car"}
-                          className={`header-sublist ${active? "opacity-100" : "opacity-0"}`}
+                          className={`header-sublist ${active? "opacity-100" : "opacity-0"} ${location.pathname === "/car"? "underline underline-offset-8" : ""}`}
                           onClick={headerOff}>
                         Car
                     </Link>
                     <Link to={"/rover"}
-                          className={`header-sublist ${active? "opacity-100" : "opacity-0"}`}
+                          className={`header-sublist ${active? "opacity-100" : "opacity-0"} ${location.pathname === "/rover"? "underline underline-offset-8" : ""}`}
                           onClick={headerOff}>
                         Rover
                     </Link>
                     <Link to={"/robot-arm"}
-                          className={`header-sublist ${active? "opacity-100" : "opacity-0"}`}
+                          className={`header-sublist ${active? "opacity-100" : "opacity-0"} ${location.pathname === "/robot-arm"? "underline underline-offset-8" : ""}`}
                           onClick={headerOff}>
                         Robot Arm
                     </Link>
                     <Link to={"/guide-bot"}
-                          className={`header-sublist ${active? "opacity-100" : "opacity-0"}`}
+                          className={`header-sublist ${active? "opacity-100" : "opacity-0"} ${location.pathname === "/guide-bot"? "underline underline-offset-8" : ""}`}
                           onClick={headerOff}>
                         Guide Bot
                     </Link>
                     <Link to={"/ball-balance"}
-                          className={`header-sublist ${active? "opacity-100" : "opacity-0"}`}
+                          className={`header-sublist ${active? "opacity-100" : "opacity-0"} ${location.pathname === "/ball-balance"? "underline underline-offset-8" : ""}`}
                           onClick={headerOff}>
                         Ball Balance
                     </Link>
                     <Link to={"/credit"}
-                          className={`header-list ${active? "opacity-100" : "opacity-0"}`}
+                          className={`header-list ${active? "opacity-100" : "opacity-0"} ${location.pathname === "/credit"? "underline underline-offset-8" : ""}`}
                           onClick={headerOff}>
                         Credit
                     </Link>
