@@ -16,6 +16,7 @@ module.exports = {
     },
     extend: {
       spacing: {
+        145: "36.25rem",
         160: "40rem"
       },
       animation: {
