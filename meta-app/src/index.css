@@ -19,7 +19,7 @@
         @apply
         pl-8
         w-full
-        h-12 mobile:h-14
+        h-10 mobile:h-12
         text-xl mobile:text-2xl
         font-bold
         flex justify-start items-center
