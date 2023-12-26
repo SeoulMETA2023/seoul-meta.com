@@ -25,4 +25,18 @@
         flex justify-start items-center
         duration-500;
     }
+
+    .content-container {
+        @apply
+        h-140
+        p-7
+        grid grid-rows-12 gap-2;
+    }
+
+    .external-link {
+        @apply
+        text-blue-sky
+        font-noto-sans
+        after:content-['>'] after:ml-1.5
+    }
 }
