@@ -4,20 +4,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    screens: {
-      "mobileS": "330px",
-      "mobile": "380px",
-      "tablet": "640px",
-      "laptop": "1024px",
-      "desktop": "1280px"
-    },
     fontFamily: {
       "noto-sans": ["Noto Sans KR", "sans-serif"],
       "open-sans": ["Open Sans", "sans-serif"]
     },
     extend: {
-        gridTemplateRows: {
-            12: "repeat(12, minmax(0, 1fr))"
+      screens: {
+        xs: "380px"
+      },
+      gridTemplateRows: {
+          12: "repeat(12, minmax(0, 1fr))"
         },
       spacing: {
         140: "35rem",
