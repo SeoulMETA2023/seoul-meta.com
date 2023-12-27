@@ -7,7 +7,7 @@ export default function Home() {
 
     useEffect(() => {
         setTitle("Home | META")
-    }, [setTitle]);
+    }, []);
 
     return (
         <div>

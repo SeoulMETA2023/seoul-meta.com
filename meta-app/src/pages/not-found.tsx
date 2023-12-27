@@ -1,8 +1,15 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect} from 'react';
 import HeaderBar from "../components/header-bar";
 import Footer from "../components/footer";
+import {useTitle} from "../utils/title";
 
 export default function NotFound() {
+    const [, setTitle] = useTitle()
+
+    useEffect(() => {
+        setTitle("Not Found")
+    }, []);
+
     return (
         <Fragment>
             <HeaderBar/>
